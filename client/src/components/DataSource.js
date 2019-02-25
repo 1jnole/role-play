@@ -18,14 +18,16 @@ class DataSource extends Component {
       .then(response => response.json())
       .then(data => this.setState({ dataSource : data['Brastlewark'] }));
   }
-  
+
   render() {
+
+  //   {this.state.dataSource.map(function(item,i){
+  //      return (<li key={i}>{item.name}</li>)
+  //   }
+  // )}
     return (
          <ul>
-            {this.state.dataSource.map(function(item,i){
-               return (<li key={i}>{item.name}</li>)
-            }
-          )}
+            sdfs
           </ul>
     );
   }

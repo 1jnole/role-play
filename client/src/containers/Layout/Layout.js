@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Row, Col } from 'antd';
-import DataSource from  '../../components/DataSource'
+import DataSource from  '../../components/DataSource';
+import HabitantList from  '../../components/HabitantList';
 import './Layout.scss';
 
 const { Header, Content, Sider } = Layout;
@@ -21,7 +22,7 @@ class ContainerLayout extends Component {
         <Header className="header">
           <Row>
             <Col span={6}>
-              <DataSource/>
+              <HabitantList/>
             </Col>
             <Col span={6}>
             b
