@@ -4,7 +4,6 @@ export function fetchHabitants() {
     return fetch("https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json")
       .then(handleErrors)
       .then(response => response.json())
-      //.then(data => console.log(data['Brastlewark']))
       .then(json => {
         dispatch(fetchHabitantsSuccess(json['Brastlewark']));
         return json['Brastlewark'];

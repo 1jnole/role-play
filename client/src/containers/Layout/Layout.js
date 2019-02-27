@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import { Layout, Row, Col } from 'antd';
-import DataSource from  '../../components/DataSource';
-import HabitantList from  '../../components/HabitantList';
+import React, {Component} from 'react';
+import {Layout} from 'antd';
+import Age from '../../components/filters/Age';
+import HairColor from '../../components/filters/HairColor';
+import HabitantList from '../../components/HabitantList';
 import './Layout.scss';
 
-const { Header, Content, Sider } = Layout;
+const { Content, Sider} = Layout;
 
 /**
  *
@@ -17,36 +18,17 @@ class ContainerLayout extends Component {
    * @return {React.Component}
    */
   render() {
-    return (
+    return (<div>
       <Layout className="role-play">
-        <Header className="header">
-          <Row>
-            <Col span={6}>
-              <HabitantList/>
-            </Col>
-            <Col span={6}>
-            b
-            </Col>
-            <Col span={6}>
-              c
-            </Col>
-            <Col span={6}>
-              d
-            </Col>
-          </Row>
-        </Header>
-        <Layout>
-          <Sider className="filters" theme="light">
-
-          </Sider>
-          <Layout>
-            <Content className="content">
-                Content
-            </Content>
-          </Layout>
-        </Layout>
+        <Sider className="filters">
+          <Age/>
+          <HairColor/>
+        </Sider>
+        <Content className="content">
+          <HabitantList/>
+        </Content>
       </Layout>
-    );
+    </div>);
   }
 }
 
